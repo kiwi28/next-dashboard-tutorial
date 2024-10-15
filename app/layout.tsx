@@ -1,11 +1,17 @@
+import { invoices } from "@/app/lib/placeholder-data";
+
+import "@/app/ui/global.css";
+import { inter } from "./ui/fonts";
+
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+	// console.log("invoices", invoices);
+	return (
+		<html lang="en">
+			<body className={`${inter.className} antialiased`}>{children}</body>
+		</html>
+	);
 }
